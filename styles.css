@@ -1,0 +1,273 @@
+/* Очень страшная часть чужого проекта к которому мне не хочется прикасаться, чтобы дай бог ничего не испортить */
+:not(:defined)>* {
+  display: none;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background-color: var(--bg-color);
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+model-viewer {
+  height: 90%;
+  width: 90%;
+  background-color: #FFAA00;
+}
+
+.progress-bar {
+  display: block;
+  width: 33%;
+  height: 10%;
+  max-height: 2%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  border-radius: 25px;
+  box-shadow: 0px 3px 10px 3px rgba(0, 0, 0, 0.5), 0px 0px 5px 1px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.progress-bar.hide {
+  visibility: hidden;
+  transition: visibility 0.3s;
+}
+
+.update-bar {
+  background-color: rgba(255, 255, 255, 0.9);
+  width: 0%;
+  height: 100%;
+  border-radius: 25px;
+  float: left;
+  transition: width 0.3s;
+}
+
+#ar-button {
+  background-image: url(ar_icon.png);
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  background-position: 12px 50%;
+  background-color: #fff;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  bottom: 16px;
+  padding: 0px 16px 0px 40px;
+  font-family: Roboto Regular, Helvetica Neue, sans-serif;
+  font-size: 14px;
+  color: #4285f4;
+  height: 36px;
+  line-height: 36px;
+  border-radius: 18px;
+  border: 1px solid #DADCE0;
+}
+
+#ar-button:active {
+  background-color: #E8EAED;
+}
+
+#ar-button:focus {
+  outline: none;
+}
+
+#ar-button:focus-visible {
+  outline: 1px solid #4285f4;
+}
+
+@keyframes circle {
+  from {
+    transform: translateX(-50%) rotate(0deg) translateX(50px) rotate(0deg);
+  }
+
+  to {
+    transform: translateX(-50%) rotate(360deg) translateX(50px) rotate(-360deg);
+  }
+}
+
+@keyframes elongate {
+  from {
+    transform: translateX(100px);
+  }
+
+  to {
+    transform: translateX(-100px);
+  }
+}
+
+model-viewer>#ar-prompt {
+  position: absolute;
+  left: 50%;
+  bottom: 60px;
+  animation: elongate 2s infinite ease-in-out alternate;
+  display: none;
+}
+
+model-viewer[ar-status="session-started"]>#ar-prompt {
+  display: block;
+}
+
+model-viewer>#ar-prompt>img {
+  animation: circle 4s linear infinite;
+}
+
+/* 
+Ксс для моего сайта */
+#site {
+  height: 70%;
+  width: 100%;
+}
+
+#cat_turtle {
+  height: 60%;
+  width: 100%;
+}
+
+#cat_tired {
+  height: 70%;
+  width: 100%;
+}
+
+#dr_doom {
+  height: 75%;
+  width: 100%;
+}
+
+#street {
+  height: 75%;
+  width: 100%;
+}
+
+#shooting_range {
+  height: 75%;
+  width: 100%;
+}
+
+#cat_beer {
+  height: 70%;
+  width: 100%;
+}
+
+#cat_hungry {
+  height: 70%;
+  width: 100%;
+}
+
+@media screen and (max-device-width: 960px) {
+  .container {
+    display: grid;
+    background-color: var(--bg-color);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "menu menu"
+      "main righty"
+      "main righty"
+      "lefty lefty";
+  }
+
+  #site {
+    height: 55%;
+    width: 100%;
+  }
+}
+
+@media screen and (min-device-width: 960px) and (max-device-width: 1200px) {
+  .container {
+    display: grid;
+    background-color: var(--bg-color);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "menu menu menu"
+      "main main righty"
+      "main main righty"
+      "lefty lefty lefty ";
+  }
+}
+
+@media screen and (min-device-width: 1200px) {
+  .container {
+    display: grid;
+    background-color: var(--bg-color);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+      "menu menu menu menu"
+      "lefty main main righty"
+      "lefty main main righty";
+  }
+}
+
+:root {
+  --bg-color: #000000;
+  --bg-color-div: #FFAA00;
+  --font-color: #000000;
+  --font-color-link: rgb(0, 0, 0);
+}
+
+a {
+  color: var(--font-color-link);
+  font-size: 3vh;
+  font-family: Helvetica;
+  text-decoration: none;
+  font-weight: 550;
+}
+
+#Logo {
+  width: 5%;
+}
+
+.text {
+  color: var(--font-color);
+  font-size: 3vh;
+  font-family: Helvetica;
+}
+
+div {
+  background-color: var(--bg-color-div);
+  width: auto;
+  height: 100px;
+  padding: 10px;
+  margin: 10px;
+
+}
+
+.menu {
+  text-align: center;
+  height: 9vh;
+  grid-area: menu;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 1%;
+  justify-content: space-evenly;
+
+}
+
+#lefty {
+  grid-area: lefty;
+
+}
+
+#righty {
+  grid-area: righty;
+
+}
+
+#main {
+  grid-area: main;
+
+}
+
+.box {
+  height: 65vh;
+  border-radius: 3%;
+}

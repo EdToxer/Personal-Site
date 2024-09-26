@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Проекты</title>
+	<link rel="stylesheet" href="styles.css">
+	<script src="code.js" type="text/javascript"></script>
+</head>
+
+<body>
+	<div class="container">
+		<div class="menu">
+
+			<img src="pictures/batman.png" alt="Крутое лого для моей странички" id="Logo">
+
+			<a href="index.html">Главная страница</a>
+
+			<a href="Projects.html">Личные проекты</a>
+
+			<a href="Kosher.html">Фотки котика</a>
+
+			<a href="3D.html">3D проекты</a>
+
+			<a href="FAQ.html">F.A.Q.</a>
+		</div>
+		<div class="box" id="lefty">
+
+			<img src="pictures/Doom.png" alt="Доктор Дум" id="dr_doom" style="visibility: hidden;">
+			<button id="go1" onclick="show_doom()">Показать</button>
+			<p class="text">
+				Низкополигональный персонаж - стилизованный
+			</p>
+		</div>
+		<div class="box" id="righty">
+			<img src="pictures/shootig_range.jpg" alt="Тир" id="shooting_range" style="visibility: hidden;">
+			<button id="go3" onclick="show_shooting_range()">Показать</button>
+			<p class="text">
+				Тир - мид поли
+			</p>
+		</div>
+		<div class="box" id="main">
+			<img src="pictures/street.jpg" alt="Улица" id="street" style="visibility: hidden;">
+			<button id="go2" onclick="show_street()">Показать</button>
+			<p class="text">
+				Улица - в процессе
+			</p>
+		</div>
+	</div>
+</body>
+<script src="code.js" type="text/javascript"></script>
+
+</html>

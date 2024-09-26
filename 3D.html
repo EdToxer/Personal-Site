@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Просмотр моделей</title>
+  <meta charset="utf-8">
+  <meta name="description" content="&lt;model-viewer&gt; template">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link type="text/css" href="styles.css" rel="stylesheet" />
+
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+
+<body>
+
+  <div class="container">
+    <div class="menu">
+
+      <img src="pictures/batman.png" alt="batman Logo" id="Logo">
+
+      <a href="index.html">Главная страница</a>
+
+      <a href="Projects.html">Личные проекты</a>
+
+      <a href="Kosher.html">Фотки котика</a>
+
+      <a href="3D.html">3D проекты</a>
+
+      <a href="FAQ.html">F.A.Q.</a>
+    </div>
+    <div class="box" id="lefty">
+      <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+      <model-viewer src="3D/Robot.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls
+        tone-mapping="neutral" poster="pictures/poster.webp" shadow-intensity="1"
+        camera-orbit="25.09deg 84.73deg 10.52m" field-of-view="30deg">
+        <div class="progress-bar hide" slot="progress-bar">
+          <div class="update-bar"></div>
+        </div>
+        <button slot="ar-button" id="ar-button">
+          View in your space
+        </button>
+        <div id="ar-prompt">
+          <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+        </div>
+    </div>
+    <div class="box" id="righty">
+      <model-viewer src="3D/Monster.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls
+        tone-mapping="neutral" poster="pictures/poster.webp" shadow-intensity="1"
+        camera-orbit="38.91deg 74.21deg 10.04m" field-of-view="30deg">
+        <div class="progress-bar hide" slot="progress-bar">
+          <div class="update-bar"></div>
+        </div>
+        <button slot="ar-button" id="ar-button">
+    </div>
+    <div class="box" id="main">
+      <model-viewer src="3D/AshBringer.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls
+        tone-mapping="neutral" poster="pictures/poster.webp" shadow-intensity="1"
+        camera-orbit="113.6deg 70.11deg 8.988m" field-of-view="30deg">
+        <div class="progress-bar hide" slot="progress-bar">
+          <div class="update-bar"></div>
+        </div>
+        <button slot="ar-button" id="ar-button">
+    </div>
+  </div>
+</body>
+
+</html>
