@@ -5,6 +5,7 @@ var button1 = document.getElementById("go1")
 var button2 = document.getElementById("go2")
 var button3 = document.getElementById("go3")
 
+
 function show_doom() {
     if (Doom.style.visibility == "visible") {
         Doom.style.visibility = "hidden"
